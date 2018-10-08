@@ -15,7 +15,7 @@ class IndecisionApp extends React.Component{
                     title={title}
                     subtitle={subtitle}
                 />
-                <Action />
+                <Action/>
                 <Options 
                     options={options}
                 />
@@ -52,8 +52,15 @@ class Action extends React.Component{
 }
 
 class Options extends React.Component{
+    constructor(props){
+        super(props);
+
+        //Where ever we call removeAll it we be binded
+        this.handleRemoveAll = this.handleRemoveAll.bind(this);
+    }
+
     handleRemoveAll(){
-        alert("LETS REMOVE ALL");
+        console.log(this.props.options)
     }
 
     render(){

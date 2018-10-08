@@ -20,9 +20,7 @@ class Counter extends React.Component{
     handleMinusOne(){
         this.setState((prevState)=>{
             if (prevState.count > 0){
-                return {
-                    count: prevState.count - 1
-                };
+                return {count: prevState.count - 1};
             }
         });
     }
