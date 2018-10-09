@@ -4,18 +4,25 @@ import ReactDOM from 'react-dom';
 //import registerServiceWorker from './registerServiceWorker';
 
 class IndecisionApp extends React.Component{
+
+    constructor(props){
+        super(props);
+        this.state = {
+            title: "Indecision",
+            subtitle: "Put your life in the hands of a computor"
+        }
+    }
+
     render(){
-        const title = "Indecision";
-        const subtitle = "Put your life in the hands of a computor";
-        const options = ['Thing One', 'Thing Two', 'Thing Three'];
+        let options = ['Thing One', 'Thing Two', 'Thing Three'];
         
         return(
             <div>
                 <Header 
-                    title={title}
-                    subtitle={subtitle}
+                    title={this.state.title}
+                    subtitle={this.state.subtitle}
                 />
-                <Action/>
+                <Action />
                 <Options 
                     options={options}
                 />
@@ -37,8 +44,12 @@ class Header extends React.Component{
 }
 
 class Action extends React.Component{
+    constructor(props){
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+    }
+
     handleClick(){
-        alert("CLICK!!!");
     }
 
     render(){
