@@ -5,15 +5,17 @@
   "scripts": {
     "build": "webpack --watch",
     "serve": "live-server public/",
-    "babel-build": "babel src/index.js --out-file=public/scripts/index.js --presets=env,react --watch"
- 
-  },  
+    "babel-build": "babel src/index.js --out-file=public/scripts/index.js --watch"
+  },
   "dependencies": {
-    "babel-cli": "6.24.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "live-server": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "webpack": "^4.20.2",
-    "live-server":"^1.2.0"
+    "validator": "^10.8.0",
+    "webpack": "^4.20.2"
   },
   "devDependencies": {
     "webpack-cli": "^3.1.2"
